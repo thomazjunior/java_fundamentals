@@ -39,7 +39,7 @@ class HelloWorld {
          * 3. Type Conversion/Casting:
          * Java provides two types of type conversion: implicit (widening) and explicit
          * (narrowing). Implicit conversion occurs automatically when a narrower data
-         * type is assigned to a wider data type. Explicit conversion requires manual
+         * type is assigned to a wider data type. Explicit conversion requires manual 
          * casting and is necessary when assigning a wider data type to a narrower data
          * type.
          * a) Widening Conversion (Implicit):
