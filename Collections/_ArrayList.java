@@ -36,6 +36,7 @@ public class _ArrayList {
         System.out.println(anyEven);
         System.out.println(allEven);
         System.out.println(noneNegative);
+        
 
     }
 }
