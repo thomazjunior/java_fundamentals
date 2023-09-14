@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+//Iterator types: fail-safe and fail-fast | weakly-consistent
+
 public class IteratorClass {
     public static void main(String[] args) {
         StudentCollection studentCollection = new StudentCollection();

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -63,10 +64,34 @@ public class Java8 {
         String result = add("Message", fn);
         System.out.println(result);
 
+        //Interface Default and Static Methods 
+        //# before Java(8) interfaces could have only public abstract method
+
+        //Method Reference 
+        //# Reference to a Static Method - ContainingClass::methodName 
+        boolean isReal = list.stream().anyMatch(u -> User.isRealUser(u));
+        boolean isReal2 = list.stream().anyMatch(User::isRealUser);
+
+        //# Reference to an Instance Method 
+        User user = new User();
+        boolean isLegalName = list.stream().anyMatch(user::isLegalName);
+
+        //# Reference to an Instance Method of an Object of a Particular Type 
+        long count2 = list.stream().filter(String::isEmpty).count();
+
+
+        //# Reference to a Constructor 
+        Stream<User> stream3 = list.stream().map(User::new);
+
+        //OPTIONAL 
+        Optional<String> optional = Optional.empty();
+
     }
 
     public static String add(String string, Function<String, String> function) {
         return function.apply(string);
     }
+
+
 
 }

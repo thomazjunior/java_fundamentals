@@ -1,4 +1,6 @@
+package List;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,13 +32,14 @@ public class _ArrayList {
         System.out.println(numbers);
         System.out.println(skippedNumbers);
 
+        System.out.println(Collections.frequency(numbers, "1"));
+
         boolean anyEven = numbers.stream().anyMatch(n -> n % 2 == 0);
         boolean allEven = numbers.stream().allMatch(n -> n % 2 == 0);
         boolean noneNegative = numbers.stream().noneMatch(n -> n < 0);
         System.out.println(anyEven);
         System.out.println(allEven);
         System.out.println(noneNegative);
-        
 
     }
 }
